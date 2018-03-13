@@ -37,9 +37,9 @@ class Model:
 
     # Adapted from https://github.com/monikkinom/ner-lstm/blob/master/model.py __init__ function
     def create_placeholders(self):
-        self._input_words = tf.placeholder(tf.int32, [BATCH_SIZE, self._sequence_len])
-        self._orth_feats = tf.placeholder(tf.int32, [BATCH_SIZE, self._sequence_len, NUM_ORTH_FEATS])
-        self._output_tags = tf.placeholder(tf.int32, [BATCH_SIZE, self._sequence_len])
+        self._input_words = tf.placeholder(tf.int32, [BATCH_SIZE, self._sequence_len], "input_words")
+        self._orth_feats = tf.placeholder(tf.int32, [BATCH_SIZE, self._sequence_len, NUM_ORTH_FEATS], "orth_feats")
+        self._output_tags = tf.placeholder(tf.int32, [BATCH_SIZE, self._sequence_len], "output_tags")
 
     def set_input_output(self, input_, output):
         self._input_words = input_
