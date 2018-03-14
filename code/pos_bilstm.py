@@ -340,6 +340,7 @@ def test(sentence_words_test, sentence_tags_test,
                 global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
             test_loss, test_accuracy, test_oov_accuracy, test_perc_oov_words = compute_summary_metrics(sess, m, sentence_words_test,
                                                                                 sentence_tags_test)
+            print 'Model Step Number:', global_step
             print 'Test Accuracy: {:.3f}'.format(test_accuracy)
             print 'Test Loss: {:.3f}'.format(test_loss)
             print 'Test OOV Accuracy: {:.3f}'.format(test_oov_accuracy)

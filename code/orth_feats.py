@@ -116,7 +116,7 @@ def get_orth_feats(word):
     feats.append(starts_with_number(word))
     lowercase_word = word.lower()
     feats.extend([1 if lowercase_word.endswith(s) else 0 for s in suffixes])
-    # feats.extend([1 if lowercase_word.startswith(p) else 0 for p in prefixes])
+    feats.extend([1 if lowercase_word.startswith(p) else 0 for p in prefixes])
     return feats
 
 def get_num_orth_feats():
