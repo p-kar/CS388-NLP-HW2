@@ -1,9 +1,9 @@
 import glob
 from random import shuffle
-from orth_feats import get_orth_feats
+from orth_feats import get_orth_feats, get_num_orth_feats
 
 # number of orthographic features
-NUM_ORTH_FEATS = 73
+NUM_ORTH_FEATS = get_num_orth_feats()
 MAX_LENGTH = 100
 
 class PreprocessData:

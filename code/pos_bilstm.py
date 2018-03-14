@@ -10,6 +10,7 @@ import itertools
 from datetime import datetime
 from random import shuffle
 from preprocess import PreprocessData
+from orth_feats import get_num_orth_feats
 
 MAX_LENGTH = 100
 BATCH_SIZE = 128
@@ -18,7 +19,7 @@ CHECKPOINT_FREQUENCY = 50
 NO_OF_EPOCHS = 6
 
 # number of orthographic features
-NUM_ORTH_FEATS = 73
+NUM_ORTH_FEATS = get_num_orth_feats()
 # 0 - no orth. features, 1 - orth. features concatenated to the LSTM input,
 # 2 - orth. features concatenated to the LSTM output
 ORTH_FEAT_MODE = "0"
@@ -94,7 +95,7 @@ class Model:
         
         ## Concatenate word orthographic features in the input of the LSTM
         if ORTH_FEAT_MODE == "1":
-            print "Adding orthographic features to LSTM input"
+            print "Adding %d orthographic features to LSTM input" % (NUM_ORTH_FEATS)
             lstm_input = tf.concat([lstm_input, tf.cast(self._orth_feats, tf.float32)], 2)
 
         ## Apply bidrectional dyamic rnn to get a tuple of forward
@@ -112,7 +113,7 @@ class Model:
             
             ## Concatenate word orthographic features in the input of the LSTM
             if ORTH_FEAT_MODE == "2":
-                print "Adding orthographic features to LSTM output"
+                print "Adding %d orthographic features to LSTM input" % (NUM_ORTH_FEATS)
                 outputs = tf.concat([outputs, tf.cast(self._orth_feats, tf.float32)], 2)
             
             ## Apply linear transformation to get logits(unnormalized scores)
