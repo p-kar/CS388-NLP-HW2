@@ -37,7 +37,7 @@ This will choose the latest model checkpoint from the `TRAIN_DIR` and run it on 
 python pos_bilstm.py $DATASET_PATH $TRAIN_DIR $SPLIT_TYPE test $ORTH_FEAT_MODE
 ~~~~
 
-### Results
+## Results
 
 The models were run on a Late 2013 MacBook Pro with a 2.3 GHz Intel Core i7 processor. Only CPU was used for training the models.
 
