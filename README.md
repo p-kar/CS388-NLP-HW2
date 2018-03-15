@@ -23,7 +23,7 @@ Part-of-Speech (POS) tagging is the lowest form of syntactic analysis of text. P
 |      `MODE`      |                                                `train` or `test`                                               |
 | `ORTH_FEAT_MODE` | `0` - no orth. features are added, `1` - concatenated to the LSTM input, `2` - concatenated to the LSTM output |
 
-### Training POS tagger
+### Training the POS tagger
 
 ~~~~
 python pos_bilstm.py $DATASET_PATH $TRAIN_DIR $SPLIT_TYPE train $ORTH_FEAT_MODE
@@ -31,7 +31,7 @@ python pos_bilstm.py $DATASET_PATH $TRAIN_DIR $SPLIT_TYPE train $ORTH_FEAT_MODE
 
 ### Running the model on the test set
 
-This will choose the latest model checkpoint from the `$TRAIN_DIR` and run it on the test set. Make sure to provide the same `ORTH_FEAT_MODE` that was provided during the training of the model.
+This will choose the latest model checkpoint from the `TRAIN_DIR` and run it on the test set. Make sure to provide the same `ORTH_FEAT_MODE` that was provided during the training of the model.
 
 ~~~~
 python pos_bilstm.py $DATASET_PATH $TRAIN_DIR $SPLIT_TYPE test $ORTH_FEAT_MODE
@@ -39,10 +39,12 @@ python pos_bilstm.py $DATASET_PATH $TRAIN_DIR $SPLIT_TYPE test $ORTH_FEAT_MODE
 
 ### Results
 
+The models were run on a Late 2013 MacBook Pro with a 2.3 GHz Intel Core i7 processor. Only CPU was used for training the models.
+
 <img src="plots/Validation-Accuracy.png" width="425"/> <img src="plots/Validation-OOV-Accuracy.png" width="425"/>
 
-|       Model       | Accuracy (`train`) | Accuracy (`val`) | Accuracy (`test`) | OOV Accuracy (`val`) | OOV Accuracy (`test`) | Training Runtime (approx. min) |
-|:-----------------:|:------------------:|:----------------:|:-----------------:|:--------------------:|:---------------------:|:------------------------------:|
-|      baseline     |       0.9764       |       0.953      |       0.955       |         0.532        |         0.520         |             **39**             |
-|  added LSTM input |       0.9766       |     **0.962**    |     **0.963**     |       **0.722**      |       **0.728**       |               58               |
-| added LSTM output |     **0.9790**     |       0.955      |       0.956       |         0.580        |         0.562         |               57               |
+|        Model         | Accuracy (`train`) | Accuracy (`val`) | Accuracy (`test`) | OOV Accuracy (`val`) | OOV Accuracy (`test`) | Training Runtime (approx. min) |
+|:--------------------:|:------------------:|:----------------:|:-----------------:|:--------------------:|:---------------------:|:------------------------------:|
+|       baseline       |       0.9764       |       0.953      |       0.955       |         0.532        |         0.520         |             **39**             |
+|  added to LSTM input |       0.9766       |     **0.962**    |     **0.963**     |       **0.722**      |       **0.728**       |               42               |
+| added to LSTM output |     **0.9790**     |       0.955      |       0.956       |         0.580        |         0.562         |               40               |
