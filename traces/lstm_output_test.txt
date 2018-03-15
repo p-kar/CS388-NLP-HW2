@@ -1,0 +1,12 @@
+(tf_gpu_python2) pkar~/Development/CS388-NLP-HW2/code$ python -u pos_bilstm.py ../pos/wsj ../tmp/pos_train_lstm_output_dir/ standard test 2
+41152 words found in training set.
+Adding 73 orthographic features to LSTM output
+WARNING:tensorflow:From pos_bilstm.py:171: calling argmax (from tensorflow.python.ops.math_ops) with dimension is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+2018-03-14 14:40:42.822123: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+Model Step Number: 700
+Test Accuracy: 0.956
+Test Loss: 0.142
+Test OOV Accuracy: 0.562
+Test Percentage of OOV Words: 2.743784

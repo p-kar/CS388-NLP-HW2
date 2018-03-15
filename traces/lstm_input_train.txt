@@ -1,0 +1,77 @@
+(tf_gpu_python2) pkar~/Development/CS388-NLP-HW2/code$ python -u pos_bilstm.py ../pos/wsj ../tmp/pos_train_lstm_input_dir/ standard train 1
+41152 words found in training set.
+Adding 73 orthographic features to LSTM input
+WARNING:tensorflow:From pos_bilstm.py:171: calling argmax (from tensorflow.python.ops.math_ops) with dimension is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+2018-03-14 05:38:00.315989: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+10 batches ====> Validation Accuracy: 0.142, OOV Accuracy: 0.146, Perc. OOV Words: 3.442, Validation Loss: 3.643
+20 batches ====> Validation Accuracy: 0.161, OOV Accuracy: 0.243, Perc. OOV Words: 3.442, Validation Loss: 3.067
+30 batches ====> Validation Accuracy: 0.156, OOV Accuracy: 0.225, Perc. OOV Words: 3.442, Validation Loss: 2.998
+40 batches ====> Validation Accuracy: 0.159, OOV Accuracy: 0.232, Perc. OOV Words: 3.442, Validation Loss: 2.972
+50 batches ====> Validation Accuracy: 0.161, OOV Accuracy: 0.232, Perc. OOV Words: 3.442, Validation Loss: 2.947
+60 batches ====> Validation Accuracy: 0.162, OOV Accuracy: 0.232, Perc. OOV Words: 3.442, Validation Loss: 2.911
+70 batches ====> Validation Accuracy: 0.172, OOV Accuracy: 0.234, Perc. OOV Words: 3.442, Validation Loss: 2.855
+80 batches ====> Validation Accuracy: 0.256, OOV Accuracy: 0.251, Perc. OOV Words: 3.442, Validation Loss: 2.753
+90 batches ====> Validation Accuracy: 0.365, OOV Accuracy: 0.270, Perc. OOV Words: 3.442, Validation Loss: 2.590
+100 batches ====> Validation Accuracy: 0.442, OOV Accuracy: 0.364, Perc. OOV Words: 3.442, Validation Loss: 2.377
+110 batches ====> Validation Accuracy: 0.460, OOV Accuracy: 0.356, Perc. OOV Words: 3.442, Validation Loss: 2.160
+120 batches ====> Validation Accuracy: 0.490, OOV Accuracy: 0.445, Perc. OOV Words: 3.442, Validation Loss: 1.958
+130 batches ====> Validation Accuracy: 0.540, OOV Accuracy: 0.446, Perc. OOV Words: 3.442, Validation Loss: 1.777
+140 batches ====> Validation Accuracy: 0.608, OOV Accuracy: 0.549, Perc. OOV Words: 3.442, Validation Loss: 1.597
+150 batches ====> Validation Accuracy: 0.676, OOV Accuracy: 0.593, Perc. OOV Words: 3.442, Validation Loss: 1.412
+160 batches ====> Validation Accuracy: 0.724, OOV Accuracy: 0.626, Perc. OOV Words: 3.442, Validation Loss: 1.228
+170 batches ====> Validation Accuracy: 0.765, OOV Accuracy: 0.634, Perc. OOV Words: 3.442, Validation Loss: 1.059
+180 batches ====> Validation Accuracy: 0.808, OOV Accuracy: 0.651, Perc. OOV Words: 3.442, Validation Loss: 0.904
+190 batches ====> Validation Accuracy: 0.834, OOV Accuracy: 0.659, Perc. OOV Words: 3.442, Validation Loss: 0.771
+200 batches ====> Validation Accuracy: 0.870, OOV Accuracy: 0.675, Perc. OOV Words: 3.442, Validation Loss: 0.657
+210 batches ====> Validation Accuracy: 0.887, OOV Accuracy: 0.682, Perc. OOV Words: 3.442, Validation Loss: 0.557
+220 batches ====> Validation Accuracy: 0.898, OOV Accuracy: 0.694, Perc. OOV Words: 3.442, Validation Loss: 0.478
+230 batches ====> Validation Accuracy: 0.909, OOV Accuracy: 0.692, Perc. OOV Words: 3.442, Validation Loss: 0.411
+240 batches ====> Validation Accuracy: 0.918, OOV Accuracy: 0.695, Perc. OOV Words: 3.442, Validation Loss: 0.361
+250 batches ====> Validation Accuracy: 0.924, OOV Accuracy: 0.693, Perc. OOV Words: 3.442, Validation Loss: 0.323
+260 batches ====> Validation Accuracy: 0.931, OOV Accuracy: 0.688, Perc. OOV Words: 3.442, Validation Loss: 0.292
+270 batches ====> Validation Accuracy: 0.936, OOV Accuracy: 0.694, Perc. OOV Words: 3.442, Validation Loss: 0.264
+280 batches ====> Validation Accuracy: 0.941, OOV Accuracy: 0.700, Perc. OOV Words: 3.442, Validation Loss: 0.242
+290 batches ====> Validation Accuracy: 0.943, OOV Accuracy: 0.694, Perc. OOV Words: 3.442, Validation Loss: 0.224
+300 batches ====> Validation Accuracy: 0.945, OOV Accuracy: 0.694, Perc. OOV Words: 3.442, Validation Loss: 0.211
+310 batches ====> Validation Accuracy: 0.948, OOV Accuracy: 0.707, Perc. OOV Words: 3.442, Validation Loss: 0.198
+320 batches ====> Validation Accuracy: 0.949, OOV Accuracy: 0.703, Perc. OOV Words: 3.442, Validation Loss: 0.189
+330 batches ====> Validation Accuracy: 0.951, OOV Accuracy: 0.703, Perc. OOV Words: 3.442, Validation Loss: 0.180
+340 batches ====> Validation Accuracy: 0.953, OOV Accuracy: 0.725, Perc. OOV Words: 3.442, Validation Loss: 0.173
+350 batches ====> Validation Accuracy: 0.954, OOV Accuracy: 0.718, Perc. OOV Words: 3.442, Validation Loss: 0.167
+360 batches ====> Validation Accuracy: 0.955, OOV Accuracy: 0.710, Perc. OOV Words: 3.442, Validation Loss: 0.162
+370 batches ====> Validation Accuracy: 0.956, OOV Accuracy: 0.724, Perc. OOV Words: 3.442, Validation Loss: 0.157
+380 batches ====> Validation Accuracy: 0.956, OOV Accuracy: 0.705, Perc. OOV Words: 3.442, Validation Loss: 0.156
+390 batches ====> Validation Accuracy: 0.957, OOV Accuracy: 0.707, Perc. OOV Words: 3.442, Validation Loss: 0.152
+400 batches ====> Validation Accuracy: 0.958, OOV Accuracy: 0.714, Perc. OOV Words: 3.442, Validation Loss: 0.148
+410 batches ====> Validation Accuracy: 0.958, OOV Accuracy: 0.718, Perc. OOV Words: 3.442, Validation Loss: 0.146
+420 batches ====> Validation Accuracy: 0.958, OOV Accuracy: 0.713, Perc. OOV Words: 3.442, Validation Loss: 0.144
+430 batches ====> Validation Accuracy: 0.958, OOV Accuracy: 0.706, Perc. OOV Words: 3.442, Validation Loss: 0.143
+440 batches ====> Validation Accuracy: 0.958, OOV Accuracy: 0.705, Perc. OOV Words: 3.442, Validation Loss: 0.144
+450 batches ====> Validation Accuracy: 0.957, OOV Accuracy: 0.701, Perc. OOV Words: 3.442, Validation Loss: 0.142
+460 batches ====> Validation Accuracy: 0.958, OOV Accuracy: 0.700, Perc. OOV Words: 3.442, Validation Loss: 0.139
+470 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.714, Perc. OOV Words: 3.442, Validation Loss: 0.137
+480 batches ====> Validation Accuracy: 0.959, OOV Accuracy: 0.715, Perc. OOV Words: 3.442, Validation Loss: 0.136
+490 batches ====> Validation Accuracy: 0.959, OOV Accuracy: 0.710, Perc. OOV Words: 3.442, Validation Loss: 0.137
+500 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.712, Perc. OOV Words: 3.442, Validation Loss: 0.135
+510 batches ====> Validation Accuracy: 0.961, OOV Accuracy: 0.721, Perc. OOV Words: 3.442, Validation Loss: 0.133
+520 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.714, Perc. OOV Words: 3.442, Validation Loss: 0.132
+530 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.704, Perc. OOV Words: 3.442, Validation Loss: 0.132
+540 batches ====> Validation Accuracy: 0.959, OOV Accuracy: 0.688, Perc. OOV Words: 3.442, Validation Loss: 0.134
+550 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.708, Perc. OOV Words: 3.442, Validation Loss: 0.132
+560 batches ====> Validation Accuracy: 0.961, OOV Accuracy: 0.714, Perc. OOV Words: 3.442, Validation Loss: 0.130
+570 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.701, Perc. OOV Words: 3.442, Validation Loss: 0.132
+580 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.693, Perc. OOV Words: 3.442, Validation Loss: 0.133
+590 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.698, Perc. OOV Words: 3.442, Validation Loss: 0.132
+600 batches ====> Validation Accuracy: 0.961, OOV Accuracy: 0.704, Perc. OOV Words: 3.442, Validation Loss: 0.130
+610 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.708, Perc. OOV Words: 3.442, Validation Loss: 0.131
+620 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.690, Perc. OOV Words: 3.442, Validation Loss: 0.131
+630 batches ====> Validation Accuracy: 0.961, OOV Accuracy: 0.703, Perc. OOV Words: 3.442, Validation Loss: 0.129
+640 batches ====> Validation Accuracy: 0.961, OOV Accuracy: 0.721, Perc. OOV Words: 3.442, Validation Loss: 0.129
+650 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.703, Perc. OOV Words: 3.442, Validation Loss: 0.130
+660 batches ====> Validation Accuracy: 0.961, OOV Accuracy: 0.716, Perc. OOV Words: 3.442, Validation Loss: 0.129
+670 batches ====> Validation Accuracy: 0.960, OOV Accuracy: 0.701, Perc. OOV Words: 3.442, Validation Loss: 0.130
+680 batches ====> Validation Accuracy: 0.961, OOV Accuracy: 0.707, Perc. OOV Words: 3.442, Validation Loss: 0.128
+690 batches ====> Validation Accuracy: 0.961, OOV Accuracy: 0.710, Perc. OOV Words: 3.442, Validation Loss: 0.128
+700 batches ====> Validation Accuracy: 0.962, OOV Accuracy: 0.722, Perc. OOV Words: 3.442, Validation Loss: 0.126
