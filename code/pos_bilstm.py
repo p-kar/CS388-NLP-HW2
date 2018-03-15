@@ -113,7 +113,7 @@ class Model:
             
             ## Concatenate word orthographic features in the input of the LSTM
             if ORTH_FEAT_MODE == "2":
-                print "Adding %d orthographic features to LSTM input" % (NUM_ORTH_FEATS)
+                print "Adding %d orthographic features to LSTM output" % (NUM_ORTH_FEATS)
                 outputs = tf.concat([outputs, tf.cast(self._orth_feats, tf.float32)], 2)
             
             ## Apply linear transformation to get logits(unnormalized scores)
